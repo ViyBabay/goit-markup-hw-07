@@ -21,7 +21,13 @@ body {
     width: auto;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
 
@@ -45,9 +51,9 @@ ul {
 *::before,
 *::after {
     box-sizing: inherit;
-} *
+}
 
-.container {
+* .container {
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
@@ -100,15 +106,15 @@ ul {
     text-decoration: none;
 }
 
-.logo-web {
+.logo__web {
     color: var(--accent-color);
 }
 
-.logo-studio {
+.logo__studio {
     color: #000000;
 }
 
-.logo-white {
+.logo__white {
     color: var(--white-text-color);
 }
 
@@ -121,11 +127,11 @@ ul {
     display: flex;
 }
 
-.navigation__list li + li {
+.navigation__list li+li {
     margin-left: 50px;
 }
 
-.navigation__list .link {
+.navigation__link {
     position: relative;
     display: block;
     padding-top: 32px;
@@ -142,12 +148,13 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.navigation__list .link:hover, .navigation__list .link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
     color: var(--accent-color);
 }
 
-.link.active {
-    color: var(--accent-color)
+.navigation__link.active {
+    color: var(--accent-color);
 }
 
 .active::after {
@@ -166,7 +173,7 @@ ul {
     display: flex;
 }
 
-.contacts .contacts__item + .contacts__item {
+.contacts .contacts__item+.contacts__item {
     margin-left: 50px;
 }
 
@@ -185,7 +192,8 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.contacts__item--style:hover, .contacts__item-style:focus {
+.contacts__item--style:hover,
+.contacts__item-style:focus {
     color: var(--accent-color);
 }
 
@@ -199,17 +207,15 @@ ul {
 .hero {
     background-color: var(--secondary-background-color);
     padding: 200px 0px 200px 0px;
-    background-image: 
-   linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-    ), 
-    url("../images/background-img.jpg");
+    background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/background-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.hero-title {
+.hero__title {
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -224,11 +230,11 @@ ul {
     text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
     font-family: inherit;
 }
 
-.hero-button {
+.hero__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -251,7 +257,7 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.hero-button:hover {
+.hero__button:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -329,7 +335,7 @@ ul {
     overflow: hidden;
 }
 
-.job__item--thumb > .job__item--label {
+.job__item--thumb>.job__item--label {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -376,7 +382,11 @@ ul {
     margin-right: 0;
 }
 
-.name {
+.name__info {
+    padding-top: 30px;
+}
+
+.name__info--name {
     margin-bottom: 10px;
     font-style: normal;
     font-weight: 500;
@@ -386,7 +396,7 @@ ul {
     letter-spacing: 0.03em;
 }
 
-.position {
+.name__info--position {
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.19;
@@ -394,11 +404,7 @@ ul {
     letter-spacing: 0.03em;
 }
 
-.name-info {
-    padding-top: 30px;
-}
-
-.team-links {
+.name__info--links {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -406,7 +412,7 @@ ul {
     margin: 16px 0px 30px 0px;
 }
 
-.team-link {
+.item__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -419,14 +425,25 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.team-link:hover, .team-link:focus {
+.item__link:hover,
+.item__link:focus {
     fill: var(--white-text-color);
     background-color: var(--accent-color);
 }
 
 /*CLIENTS*/
 
-.clients-list {
+.clients__title {
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.clients__list {
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -434,10 +451,9 @@ ul {
     margin-right: auto;
 }
 
-.clients-item {
-}
+.clients__item {}
 
-.client-link {
+.clients__item--link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -451,7 +467,8 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.client-link:hover, .client-link:focus {
+.clients__item--link:hover,
+.clients__item--link:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -472,15 +489,15 @@ ul {
     align-items: baseline;
 }
 
-.adress-item {
+.adress__item {
     margin-bottom: 9px;
 }
 
-.adress-item:first-child {
+.adress__item:first-child {
     margin-top: 20px;
 }
 
-.adress-text {
+.adress__item--text {
     text-decoration: none;
     color: var(--white-text-color);
     font-size: 14px;
@@ -493,7 +510,7 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.contact {
+.adress__item--contact {
     text-decoration: none;
     color: var(--contacts-color);
     font-size: 14px;
@@ -506,13 +523,13 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.adress-text:hover,
-.adress-text:focus {
+.adress__item--text:hover,
+.adress__item--text:focus {
     color: var(--accent-color);
 }
 
-.contact:hover,
-.contact:focus {
+.adress__item--contact:hover,
+.adress__item--contact:focus {
     color: var(--accent-color);
 }
 
@@ -550,7 +567,8 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.footer-link:hover, .footer-link:focus {
+.footer-link:hover,
+.footer-link:focus {
     background-color: var(--accent-color);
 }
 
@@ -639,7 +657,8 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-.buttons:hover, .buttons:focus {
+.buttons:hover,
+.buttons:focus {
     background-color: var(--accent-color);
     color: var(--white-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -672,7 +691,7 @@ ul {
 }
 
 .card-txt {
-    padding:  20px 24px 20px 24px;
+    padding: 20px 24px 20px 24px;
     border: 1px solid #eeeeee;
     border-top: none;
 }
@@ -722,7 +741,7 @@ ul {
 .backdrop {
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
@@ -762,7 +781,8 @@ ul {
     transition: fill var(--main-trans-duration) var(--cubic);
 }
 
-.close-icon:hover, .close-icon:focus {
+.close-icon:hover,
+.close-icon:focus {
     fill: var(--accent-color);
 }
 
@@ -804,7 +824,8 @@ ul {
     margin-bottom: 4px;
 }
 
-.modal-input, .modal-txtarea {
+.modal-input,
+.modal-txtarea {
     display: block;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -827,7 +848,8 @@ ul {
     cursor: pointer;
 }
 
-.modal-input:hover, .modal-txtarea:hover {
+.modal-input:hover,
+.modal-txtarea:hover {
     border-color: var(--accent-color);
 }
 
@@ -856,10 +878,11 @@ ul {
     cursor: pointer;
 }
 
-.modal-input:hover + .modal-icon,
-.modal-input:focus + .modal-icon {
+.modal-input:hover+.modal-icon,
+.modal-input:focus+.modal-icon {
     fill: var(--accent-color);
-    border-color: var(--accent-color);;
+    border-color: var(--accent-color);
+    ;
 }
 
 .modal-group:last-of-type {
@@ -893,7 +916,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .check-hide {
@@ -915,10 +938,10 @@ ul {
     border: 2px solid var(--main-text-color);
     fill: var(--nav-background-color);
     transition: border var(--main-trans-duration) var(--cubic),
-    background-color var(--main-trans-duration) var(--cubic) var(--accent-color);
+        background-color var(--main-trans-duration) var(--cubic) var(--accent-color);
 }
 
-.check-hide:checked + .agreement > .check-icon {
+.check-hide:checked+.agreement>.check-icon {
     border: none;
     background-color: var(--accent-color);
 }
@@ -929,7 +952,7 @@ ul {
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
     margin: 0 auto;
-    
+
 }
 
 .check-link {
@@ -937,7 +960,7 @@ ul {
     line-height: 1.71;
     color: var(--accent-color);
     margin-left: 5px;
-    
+
 }
 
 .checkbox {
